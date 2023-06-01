@@ -1,0 +1,25 @@
+{
+  "name": "strapi-provider-email-brevo",
+  "version": "0.1.1",
+  "description": "Brevo (former Sendinblue) provider for strapi email",
+  "keywords": [
+    "email",
+    "strapi",
+    "sendinblue",
+    "brevo"
+  ],
+  "homepage": "https://github.com/red-made/strapi-provider-email-brevo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/red-made/strapi-provider-email-brevo.git"
+  },
+  "main": "./index.js",
+  "author": {
+    "name": "Red-Made",
+    "email": "info@devinred.com",
+    "url": "https://devinred.com/"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
