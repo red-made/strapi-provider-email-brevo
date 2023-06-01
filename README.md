@@ -4,10 +4,10 @@
 
 ```bash
 # using yarn
-yarn add @strapi/provider-email-brevo
+yarn add strapi-provider-email-brevo
 
 # using npm
-npm install @strapi/provider-email-brevo --save
+npm install strapi-provider-email-brevo --save
 ```
 
 ## Configuration
