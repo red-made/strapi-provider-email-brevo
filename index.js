@@ -10,10 +10,16 @@ module.exports = {
         try {
           const { from, to, cc, bcc, replyTo, subject, text, html, ...rest } = options;
 
+          let senderEmail = from || settings.defaultSenderEmail;
+          senderEmail = senderEmail.match(/<(.*?)>/g) ? email.match(/<(.*?)>/g)?.map((a) => a.replace(/<|>/g, ""))[0] : senderEmail;
+
+          let senderName = from || settings.defaultSenderName;
+          senderName = senderName.match(/(.*?)</g) ? senderName.match(/(.*?)</g)?.map((a) => a.replace(/<|>/g, ""))[0] : senderName;
+
           const msg = {
             sender: {
               name: from || settings.defaultSenderName,
-              email: from || settings.defaultSenderEmail,
+              email: senderEmail,
             },
             to: [{ email: to }],
             cc,
@@ -29,7 +35,7 @@ module.exports = {
             headers: { "api-key": apiKey },
           });
 
-          console.log(send);
+          // console.log(send);
           return true;
         } catch (e) {
           console.log(e);
