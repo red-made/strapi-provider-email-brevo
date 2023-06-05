@@ -36,7 +36,7 @@ in config/plugins.js
 # Changelog
 
 
-## [1.0.3] - WIP
+## [1.0.4]
 ### FIXED
 - Fixed the sender format as `<Name email@email.com>`
 - Resolved the issue with the STRAPI email template, "Email.template.reset_password," to ensure it works properly

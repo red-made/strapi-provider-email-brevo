@@ -11,7 +11,7 @@ module.exports = {
           const { from, to, cc, bcc, replyTo, subject, text, html, ...rest } = options;
 
           let senderEmail = from || settings.defaultSenderEmail;
-          senderEmail = senderEmail.match(/<(.*?)>/g) ? email.match(/<(.*?)>/g)?.map((a) => a.replace(/<|>/g, ""))[0] : senderEmail;
+          senderEmail = senderEmail.match(/<(.*?)>/g) ? senderEmail.match(/<(.*?)>/g)?.map((a) => a.replace(/<|>/g, ""))[0] : senderEmail;
 
           let senderName = from || settings.defaultSenderName;
           senderName = senderName.match(/(.*?)</g) ? senderName.match(/(.*?)</g)?.map((a) => a.replace(/<|>/g, ""))[0] : senderName;
