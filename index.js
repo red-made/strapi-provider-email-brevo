@@ -18,7 +18,7 @@ module.exports = {
 
           const msg = {
             sender: {
-              name: from || settings.defaultSenderName,
+              name: senderName,
               email: senderEmail,
             },
             to: [{ email: to }],
